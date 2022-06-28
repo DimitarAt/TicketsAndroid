@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="EventMasterApp.OrganizerActivity" android:onClick="OnButtonChoosePlaceClick">
+
+    <Button
+            android:text="@string/organizer_button_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_button_place"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="510dp"
+            app:layout_constraintHorizontal_bias="0.498" android:onClick="OnButtonChoosePlaceClick"/>
+    <TextView
+            android:text="@string/organizer_event_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_text_view"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="40dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/organizer_edit_name"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_text_view"
+            android:layout_marginTop="25dp" app:layout_constraintStart_toEndOf="@+id/organizer_text_name"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/organizer_event_name"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/organizer_edit_description"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_edit_name"
+            android:layout_marginTop="25dp" app:layout_constraintStart_toStartOf="@+id/organizer_edit_name"
+            app:layout_constraintEnd_toEndOf="@+id/organizer_edit_name"
+            android:hint="@string/organizer_event_description"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/organizer_edit_type"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_edit_description"
+            android:layout_marginTop="25dp" app:layout_constraintStart_toStartOf="@+id/organizer_edit_description"
+            app:layout_constraintEnd_toEndOf="@+id/organizer_edit_description"
+            android:hint="@string/organizer_event_type"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/organizer_edit_data"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_edit_type"
+            android:layout_marginTop="25dp" app:layout_constraintStart_toStartOf="@+id/organizer_edit_type"
+            app:layout_constraintEnd_toEndOf="@+id/organizer_edit_type" android:hint="@string/organizer_event_data"/>
+    <TextView
+            android:text="@string/organizer_event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_text_name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/organizer_edit_name"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/organizer_edit_name"/>
+    <TextView
+            android:text="@string/organizer_event_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_text_description"
+            app:layout_constraintBaseline_toBaselineOf="@+id/organizer_edit_description"
+            app:layout_constraintStart_toStartOf="@+id/organizer_text_name"
+            app:layout_constraintEnd_toEndOf="@+id/organizer_text_name"/>
+    <TextView
+            android:text="@string/organizer_event_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_text_type"
+            app:layout_constraintBaseline_toBaselineOf="@+id/organizer_edit_type"
+            app:layout_constraintStart_toStartOf="@+id/organizer_text_description"
+            app:layout_constraintEnd_toEndOf="@+id/organizer_text_description"/>
+    <TextView
+            android:text="@string/organizer_event_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_event_data"
+            app:layout_constraintBaseline_toBaselineOf="@+id/organizer_edit_data"
+            app:layout_constraintStart_toStartOf="@+id/organizer_text_type"
+            app:layout_constraintEnd_toEndOf="@+id/organizer_text_type"/>
+    <Button
+            android:text="@string/organizer_button_choose_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_button_choose_event"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/organizer_button_place" android:layout_marginBottom="80dp"
+            android:onClick="OnButtonChooseEventClick" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:text="@string/organizer_event_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_text_place"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/organizer_show_place"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_button_choose_event" android:layout_marginTop="30dp"
+            android:textSize="16sp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_show_place"
+            android:text="@string/organizer_event_place"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/organizer_text_place"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/organizer_text_place" android:textSize="16sp"/>
+    <Button
+            android:text="@string/organizer_button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/organizer_button_submit"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_button_place"
+            android:layout_marginTop="40dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:onClick="OnButtonSubmitClick"/>
+    <TextView
+            android:text="@string/organizer_fill_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/organizer_edit_data" android:layout_marginTop="13dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
